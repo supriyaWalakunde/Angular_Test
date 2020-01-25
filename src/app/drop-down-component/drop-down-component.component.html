@@ -1,0 +1,16 @@
+<div class="div-style">
+  <span>{{ dropDownObj.dropdownHeading }}</span>
+</div>
+<div>
+  <ng-multiselect-dropdown
+    [placeholder]="'Select...'"
+    [data]="dropDownObj.dropdownList"
+    [(ngModel)]="selectedItems"
+    [settings]="dropDownObj.dropdownSettings"
+  >
+  </ng-multiselect-dropdown>
+</div>
+<div class="div-style">
+  <span>RESULT -- </span>
+  <span *ngFor="let v of selectedItems">{{ v.title | uppercase }} </span>
+</div>
